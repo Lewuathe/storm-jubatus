@@ -1,18 +1,18 @@
-# storm-jubatus
+storm-jubatus
 =========
 
-## How to install
+# How to install
 
 :TODO
 
-## Algorithms supported by storm-jubatus
+# Algorithms supported by storm-jubatus
 
 |Solver Type|Jubatus algorithm client|Use case|
 |:------|:------|:------|
 |REGRESSION|RegressionClient|For regression problems|
 |RECOMMENDER|RecommenderClient|For recommendation|
 
-## How to use
+# How to use
 
 ```java
 
@@ -45,10 +45,10 @@ public class JubatusTrainTopology {
 
 ```
 
-## LICENSE
+# LICENSE
 
 [Apache v2](http://www.apache.org/licenses/LICENSE-2.0)
 
-## Author
+# Author
 
 * Kai Sasaki([@Lewuathe](https://github.com/Lewuathe))
