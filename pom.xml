@@ -28,6 +28,7 @@
     </parent>
     -->
 
+    <groupId>com.lewuathe</groupId>
     <artifactId>storm-jubatus</artifactId>
     <name>storm-jubatus</name>
     <packaging>jar</packaging>
