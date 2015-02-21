@@ -24,11 +24,6 @@ public abstract class Solver {
     protected String _name;
     protected int _timeoutSec;
 
-//    abstract public void train(String label, Datum datum) throws UnsupportedOperationException;
-//    abstract public Datum predict(String label, Datum datum) throws UnsupportedOperationException;
-//    abstract public void train(double label, Datum datum) throws UnsupportedOperationException;
-//    abstract public Datum predict(double label, Datum datum) throws UnsupportedOperationException;
-
     abstract public void train(Tuple tuple);
 //    abstract public Tuple predict(Tuple tuple);
 
@@ -36,7 +31,7 @@ public abstract class Solver {
         Datum d = new Datum();
         Fields fields = tuple.getFields();
         for (String field : fields) {
-            Object obj = tuple.getByteByField(field);
+            Object obj = tuple.getValueByField(field);
             if (obj instanceof String) {
                 d.addString(field, (String) obj);
             } else if (obj instanceof Integer

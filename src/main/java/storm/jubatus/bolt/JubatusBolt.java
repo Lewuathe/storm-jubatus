@@ -28,18 +28,13 @@ public class JubatusBolt extends BaseRichBolt {
     private int _port;
     private String _name;
     private Solver _solver;
+    private Solver.Type _type;
 
     public JubatusBolt(Solver.Type type, String host, int port, String name) throws NoSuchSolverException {
-        switch (type) {
-            case REGRESSION:
-                _solver = new Regression(host, port, name);
-                break;
-            case RECOMMENDER:
-                _solver = new Recommender(host, port, name);
-                break;
-            default:
-                throw new NoSuchSolverException();
-        }
+        _type = type;
+        _host = host;
+        _port = port;
+        _name = name;
     }
 
     /**
@@ -55,6 +50,20 @@ public class JubatusBolt extends BaseRichBolt {
     @Override
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         _collector = collector;
+        try {
+            switch (_type) {
+                case REGRESSION:
+                    _solver = new Regression(_host, _port, _name);
+                    break;
+                case RECOMMENDER:
+                    _solver = new Recommender(_host, _port, _name);
+                    break;
+                default:
+                    throw new NoSuchSolverException();
+            }
+        } catch (NoSuchSolverException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

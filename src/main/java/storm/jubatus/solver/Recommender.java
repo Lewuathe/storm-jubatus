@@ -1,6 +1,5 @@
 package storm.jubatus.solver;
 
-import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
