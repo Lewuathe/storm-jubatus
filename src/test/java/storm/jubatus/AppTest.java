@@ -1,4 +1,4 @@
-package org.apache.storm;
+package storm.jubatus;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
