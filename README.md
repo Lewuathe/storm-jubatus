@@ -1,4 +1,4 @@
-storm-jubatus
+storm-jubatus [![Build Status](https://travis-ci.org/Lewuathe/storm-jubatus.svg)](https://travis-ci.org/Lewuathe/storm-jubatus)
 =========
 
 # How to install
